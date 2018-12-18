@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     var operationEnabled = false
     var isInputReset = true
+    var alreadyDecimal = false
     @IBOutlet weak var displayLabel: UILabel!
     
     // Number Buttons Outlets
@@ -49,7 +50,7 @@ class ViewController: UIViewController {
         print(sender.tag)
         let inputValue = sender.tag
         
-        // if in reset, don't accept 0 as the first integer
+        // If in reset, don't accept 0 as the first integer
         if isInputReset && inputValue == 0 {
             return
         }
@@ -69,13 +70,22 @@ class ViewController: UIViewController {
     @IBAction func resetDisplay() {
         displayLabel.text = "0"
         isInputReset = true
+        alreadyDecimal = false
     }
     
 
     func displayInput(for value: Int){
+        if alreadyDecimal {
+            return
+        }
+        alreadyDecimal = true
         let previousDisplay = displayLabel.text!
-        let displayLabelText = previousDisplay + "\(value)"
+        let valueString = value == 10 ? "." : String(value)
+        
+        let displayLabelText = previousDisplay + "\(valueString)"
+        
         displayLabel?.text = displayLabelText
+        
     }
 }
 
