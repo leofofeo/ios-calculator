@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     var operationEnabled = false
     var isInputReset = true
     var alreadyDecimal = false
+    var isValueNegated = false
     @IBOutlet weak var displayLabel: UILabel!
     
     // Number Buttons Outlets
@@ -52,6 +53,7 @@ class ViewController: UIViewController {
         
         // If in reset, don't accept 0 as the first integer
         if isInputReset && inputValue == 0 {
+            print("from isInputReset && inputvalue")
             return
         }
         
@@ -65,23 +67,33 @@ class ViewController: UIViewController {
     
     @IBAction func operationsButtonTapped(_ sender: UIButton) {
         print(sender.tag)
+        print("from operationsButtonTapped()")
     }
     
     @IBAction func resetDisplay() {
         displayLabel.text = "0"
         isInputReset = true
         alreadyDecimal = false
+        print("from resetDisplay()")
     }
     
-
-    func displayInput(for value: Int){
-        if alreadyDecimal {
+     func setAdditiveInverse() {
+        print("from negateValue()")
+        if isInputReset {
             return
         }
-        alreadyDecimal = true
+    }
+
+    func displayInput(for value: Int){
+        print("from displayInput()")
+        if alreadyDecimal && value == 10 {
+            return
+        }
+        if value == 10 {
+            alreadyDecimal = true
+        }
         let previousDisplay = displayLabel.text!
         let valueString = value == 10 ? "." : String(value)
-        
         let displayLabelText = previousDisplay + "\(valueString)"
         
         displayLabel?.text = displayLabelText
