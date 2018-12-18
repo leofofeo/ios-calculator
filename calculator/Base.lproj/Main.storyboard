@@ -119,9 +119,6 @@
                                         <state key="normal" title="x">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
-                                        <connections>
-                                            <action selector="numberButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zyz-fj-krM"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0l-UN-zat">
                                         <rect key="frame" x="0.0" y="152" width="50" height="50"/>
@@ -224,9 +221,6 @@
                                         <state key="normal" title="+">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
-                                        <connections>
-                                            <action selector="numberButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ewI-fH-Huu"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pY-c5-eTr" userLabel="0">
                                         <rect key="frame" x="0.0" y="284" width="119" height="50"/>
@@ -269,9 +263,6 @@
                                         <state key="normal" title="÷">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
-                                        <connections>
-                                            <action selector="numberButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Wv-jG-Zip"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OiJ-WK-jBz">
                                         <rect key="frame" x="207" y="152" width="50" height="50"/>
@@ -284,9 +275,6 @@
                                         <state key="normal" title="-">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
-                                        <connections>
-                                            <action selector="numberButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vZW-jI-JiF"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLv-HJ-9uO">
                                         <rect key="frame" x="138" y="284" width="50" height="50"/>
