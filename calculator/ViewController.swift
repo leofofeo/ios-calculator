@@ -13,7 +13,8 @@ class ViewController: UIViewController {
     var operationEnabled = false
     var isInputReset = true
     var alreadyDecimal = false
-    var isValueNegated = false
+    var isAdditiveInverse = false
+    
     @IBOutlet weak var displayLabel: UILabel!
     
     // Number Buttons Outlets
@@ -74,15 +75,27 @@ class ViewController: UIViewController {
         displayLabel.text = "0"
         isInputReset = true
         alreadyDecimal = false
+        isAdditiveInverse = false
         print("from resetDisplay()")
     }
     
-     func setAdditiveInverse() {
-        print("from negateValue()")
+    @IBAction func displayAdditiveInverse(_ sender: UIButton) {
         if isInputReset {
             return
         }
+        
+        if let displayText = displayLabel?.text {
+            if isAdditiveInverse {
+                var newDisplayText = displayText
+                newDisplayText.remove(at: displayText.startIndex)
+                displayLabel?.text = newDisplayText
+            } else {
+                displayLabel?.text = "-" + (displayText)
+            }
+            isAdditiveInverse = !isAdditiveInverse
+        }
     }
+    
 
     func displayInput(for value: Int){
         print("from displayInput()")

@@ -47,6 +47,9 @@
                                         <state key="normal" title="+/-">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="displayAdditiveInverse:" destination="BYZ-38-t0r" eventType="touchUpInside" id="igN-iJ-5KW"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abJ-d6-1Mb">
                                         <rect key="frame" x="138" y="20" width="50" height="50"/>
