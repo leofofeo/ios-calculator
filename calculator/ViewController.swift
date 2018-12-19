@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     var isInputReset = true
     var alreadyDecimal = false
     var isAdditiveInverse = false
+    var firstInput: Float = 0.0
+    var secondInput: Float = 0.0
     
     @IBOutlet weak var displayLabel: UILabel!
     
@@ -69,6 +71,7 @@ class ViewController: UIViewController {
     @IBAction func operationsButtonTapped(_ sender: UIButton) {
         print(sender.tag)
         print("from operationsButtonTapped()")
+        
     }
     
     @IBAction func resetDisplay() {
@@ -96,7 +99,10 @@ class ViewController: UIViewController {
         }
     }
     
-
+    @IBAction func operationTriggered(_ sender: UIButton) {
+        startOperation(for: sender.tag)
+    }
+    
     func displayInput(for value: Int){
         print("from displayInput()")
         if alreadyDecimal && value == 10 {
@@ -105,6 +111,10 @@ class ViewController: UIViewController {
         if value == 10 {
             alreadyDecimal = true
         }
+        if operationEnabled {
+            displayLabel.text = ""
+            operationEnabled = false
+        }
         let previousDisplay = displayLabel.text!
         let valueString = value == 10 ? "." : String(value)
         let displayLabelText = previousDisplay + "\(valueString)"
@@ -112,5 +122,6 @@ class ViewController: UIViewController {
         displayLabel?.text = displayLabelText
         
     }
+    
 }
 
