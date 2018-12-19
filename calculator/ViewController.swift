@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     var isAdditiveInverse = false
     var firstInput: Float = 0.0
     var secondInput: Float = 0.0
+    var currentOperation: Operation?
     
     @IBOutlet weak var displayLabel: UILabel!
     
